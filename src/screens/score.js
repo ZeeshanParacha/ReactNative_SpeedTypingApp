@@ -76,7 +76,7 @@ class HomeScreen extends React.Component {
                                 <View style={{ overflow: 'hidden', width: '100%' }}>
                                     <Text
                                         style={{
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             letterSpacing: 2,
                                             fontFamily: 'Raleway-Regular',
                                             justifyContent: 'center',
@@ -87,16 +87,17 @@ class HomeScreen extends React.Component {
                                             padding: 10,
                                             width: '100%',
                                         }}>
-                                        {'Your type rate is : ' +
-                                            (Score * 100) / QuesLength +
+                                        {'Arreyyy wahh! Tumhara Score Toh Acha Hai : ' +
+                                            (Score * 100) / QuesLength.toFixed(2) +
                                             '%'}
+                                           
                                     </Text>
                                 </View>
 
                                 <View style={{ overflow: 'hidden', width: '100%' }}>
                                     <Text
                                         style={{
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             letterSpacing: 2,
                                             fontFamily: 'Raleway-Regular',
                                             justifyContent: 'center',
@@ -107,13 +108,22 @@ class HomeScreen extends React.Component {
                                             padding: 10,
                                             width: '100%',
                                         }}>
-                                        {'You have typed : ' +
-                                            Score + ' correct matches' +
-                                            ' out of ' +
+                                        {'Apney : ' +
+                                            Score + ' Jawab Sahi Likhen ' +
+                                            ' Itne Mein Se ' +
                                             QuesLength}
                                     </Text>
                                 </View>
+                                <View style={{ overflow: 'hidden', width: '100%' , justifyContent: 'center', alignItems: 'center' }}>
+                                    <TouchableOpacity
+                                        style={{ height: 40, width: 250, backgroundColor: '#FFF', justifyContent: 'center', alignItems: 'center' }}
+                                        onPress={() => this.props.navigation.navigate('Home')}
+                                    >
+                                        {/* */}
+                                        <Text style={{ fontFamily: 'Raleway-Regular', color: '#2B1F33', fontWeight : 'bold', fontSize: 16, letterSpacing: 2 }}> Dobara Likhna Hai...</Text>
 
+                                    </TouchableOpacity>
+                                </View>
                             </View>
 
                         </View>
@@ -142,14 +152,14 @@ class HomeScreen extends React.Component {
                                             padding: 10,
                                             width: '100%',
                                         }}>
-                                        Opps :(
+                                       Abey Yaaaar :(
                             </Text>
                                 </View>
 
                                 <View style={{ overflow: 'hidden', width: '100%' }}>
                                     <Text
                                         style={{
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             letterSpacing: 2,
                                             fontFamily: 'Raleway-Regular',
                                             justifyContent: 'center',
@@ -160,8 +170,8 @@ class HomeScreen extends React.Component {
                                             padding: 10,
                                             width: '100%',
                                         }}>
-                                        {'Your type rate is : ' +
-                                            (Score * 100) / QuesLength +
+                                       {'Kum Hai Itna Score : ' +
+                                            (Score * 100) / QuesLength.toFixed(2) +
                                             '%'}
                                     </Text>
                                 </View>
@@ -169,7 +179,7 @@ class HomeScreen extends React.Component {
                                 <View style={{ overflow: 'hidden', width: '100%' }}>
                                     <Text
                                         style={{
-                                            fontSize: 16,
+                                            fontSize: 14,
                                             letterSpacing: 2,
                                             fontFamily: 'Raleway-Regular',
                                             justifyContent: 'center',
@@ -180,19 +190,19 @@ class HomeScreen extends React.Component {
                                             padding: 10,
                                             width: '100%',
                                         }}>
-                                        {'You have typed : ' +
-                                            Score + ' correct matches' +
-                                            ' out of ' +
+                                        {'Apney : ' +
+                                            Score + ' Jawab Sahi Likhen ' +
+                                            ' Itne Mein Se ' +
                                             QuesLength}
                                     </Text>
                                 </View>
                                 <View style={{ overflow: 'hidden', width: '100%' , justifyContent: 'center', alignItems: 'center' }}>
                                     <TouchableOpacity
                                         style={{ height: 40, width: 250, backgroundColor: '#FFF', justifyContent: 'center', alignItems: 'center' }}
-                                        onPress={() => this.goBack()}
+                                        onPress={() => this.props.navigation.navigate('Home')}
                                     >
                                         {/* */}
-                                        <Text style={{ fontFamily: 'Raleway-Regular', color: '#2B1F33', fontWeight : 'bold', fontSize: 16, letterSpacing: 2 }}> Play Again</Text>
+                                        <Text style={{ fontFamily: 'Raleway-Regular', color: '#2B1F33', fontWeight : 'bold', fontSize: 16, letterSpacing: 2 }}> Dobara Likhna Hai...</Text>
 
                                     </TouchableOpacity>
                                 </View>
